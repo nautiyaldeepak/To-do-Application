@@ -15,7 +15,7 @@
                 <fieldset>
                 <legend>Add Task</legend>
                 <label>Title:</label><br>
-                <input type="text" name="Title" value=""><br>
+                <input type="text" name="Title" value="" required><br>
                 Description:<br>
                 <input type="text" name="Description" value=""><br>
                 Sub Tasks:<br>
@@ -26,9 +26,9 @@
                     <option value="Complete">Complete</option>
                 </select><br>
                 <label id="due-date-label">Due Date:</label><br>
-                <input type="date" name="DueDate"><br>
+                <input type="date" name="DueDate" required><br>
                 Alert:<br>
-                <input type="number" name="Alert" value="0" ><br>
+                <input type="number" name="Alert" placeholder="How many hours before due date to send Alert. If no Alert then send 0" required ><br>
                 <button id="submit-btn" type="submit" value="Add Task">Add task</button>
                 </fieldset>
             </form>
