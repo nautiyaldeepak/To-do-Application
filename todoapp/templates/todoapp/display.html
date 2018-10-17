@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'style-display.css' %}">
     <title>Task List</title>
 </head>
 <body>
     <form method='post' action="."> {% csrf_token %}
-        <button id="btn" type="submit" name="home button" value="">Home</button>
+        <button id="home-btn" type="submit" name="home button" value="">Home</button>
     </form>
     {% for post in posts %}
-        <form method='post' action="makeUpdates"> {% csrf_token %}
-            <fieldset>
+        <form id="task-list" method='post' action="makeUpdates"> {% csrf_token %}
+            <fieldset id="fieldset">
             <h1>Title: {{ post.Title }}</h1>
             {% if post.Symbol == "yes" %}
                 <h3><font color="red">ALERT</font></h3>
@@ -23,13 +23,15 @@
             <h3>Status: {{ post.Status }}</h3>
             <p>Description: {{ post.Description }}</p>
             <p>Sub Tasks: {{ post.SubTasks }}</p>
-            {% if post.Status == "Pending" %}
-                <input type="checkbox" name="Status1" value="Complete">Mark as Complete<br>
-            {% endif %}
-            {% if post.Status == "Complete" %}
-                <input type="checkbox" name="Status2" value="Pending">Mark as Pending<br>
-            {% endif %}
-            <input type="checkbox" name="DeleteTask" value="DeleteTask">Delete Task<br>
+            <div id="boxes">
+                {% if post.Status == "Pending" %}
+                <input id="complete-checkbox" type="checkbox" name="Status1" value="Complete">Mark as Complete<br>
+                {% endif %}
+                {% if post.Status == "Complete" %}
+                <input id="pending-checkbox" type="checkbox" name="Status2" value="Pending">Mark as Pending<br>
+                {% endif %}
+                <input id="delete-checkbox" type="checkbox" name="DeleteTask" value="DeleteTask">Delete Task<br>
+            </div>
             <button type="submit" name="taskId" value="{{ post.Local_id }}">Update</button>
             </fieldset>
         </form>

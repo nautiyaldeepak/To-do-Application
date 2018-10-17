@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo Application</title>
 </head>
@@ -12,43 +14,42 @@
             <form method='post' action='addTask'> {% csrf_token %}
                 <fieldset>
                 <legend>Add Task</legend>
-                Title:<br>
+                <label>Title:</label><br>
                 <input type="text" name="Title" value=""><br>
                 Description:<br>
                 <input type="text" name="Description" value=""><br>
                 Sub Tasks:<br>
                 <input type="text" name="SubTasks" value=""><br>
                 Status:<br>
-                <select name="Status">
+                <select id="status-list" name="Status">
                     <option value="Pending">Pending</option>
                     <option value="Complete">Complete</option>
                 </select><br>
-                Due Date:<br>
+                <label id="due-date-label">Due Date:</label><br>
                 <input type="date" name="DueDate"><br>
                 Alert:<br>
                 <input type="number" name="Alert" value="0" ><br>
-                <input id="btn" type="submit" value="Add Task">
+                <button id="submit-btn" type="submit" value="Add Task">Add task</button>
                 </fieldset>
             </form>
 
             <form method='post' action='showTask'> {% csrf_token %}
-                <br><input type="submit" value="Show All Tasks"><br>
+                <br><button id="show-all-btn" type="submit" value="Show All Tasks">Show All Tasks</button><br>
             </form>
 
             <form method='post' action='searchTask'> {% csrf_token %}
-                <br><input type="text" name="Search" value="">
-                <input type="submit" value="Search by Title"><br>
+                <br><input id="search-bar" type="text" name="Search" value="">
+                <button id="search-btn" type="submit" value="Search by Title">Search by title</button><br>
             </form>
             <br>
             <form method='post' action='upcomingDueDates'> {% csrf_token %}
-                Upcoming Due Dates: 
-                <select name="ComingDueDates">
+                <select id="upcoming-dates" name="ComingDueDates">
                     <option value="Today">Today</option>
                     <option value="ThisWeek">This Week</option>
                     <option value="NextWeek">Next Week</option>
                     <option value="Overdue">Overdue</option>
                 </select>
-                <input type="submit" value="Search"><br>
+                <button id="filter-btn" type="submit" value="Search">Search by Upcoming Due Dates</button><br>
             </form>
 
         {% endblock %}

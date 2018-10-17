@@ -24,7 +24,7 @@ def addTask(request):
         DueDate = datetime.now().date() + timedelta(days=30)
     else:
         DueDate = parse_date(temp_date)
-    Alert = request.POST.get('Alert', 0)
+    Alert = request.POST.get('Alert', int(0))
     todoapp = todoList(
         Local_id=Id,
         Title=Title,

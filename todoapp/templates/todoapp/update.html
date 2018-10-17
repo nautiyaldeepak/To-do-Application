@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style-update.css' %}">
     <title>Update Done</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
         <button type="submit" name="home button" value="">Home</button>
     </form>
     <form method='post' action='showTask'> {% csrf_token %}
-        <br><input type="submit" value="Show All Tasks"><br>
+        <br><button type="submit" value="Show All Tasks">Show All Tasks</button><br>
     </form>
 </body>
 </html>

@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+}
+
+#home-btn {
+    width: 10%;
+    margin-bottom: 10px;
+}
+button {
+    background-color: lightgray;
+    height: 4em;
+    width: 20%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+#fieldset {
+    margin-bottom: 10px;
+}
+
+#complete-checkbox {
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+#pending-checkbox {
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+#delete-checkbox {
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+#boxes {
+    background-color: lightblue;
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

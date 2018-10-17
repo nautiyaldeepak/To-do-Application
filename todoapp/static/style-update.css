@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    font-family: sans-serif;
+}
+
+
+button {
+    background-color: lightgray;
+    height: 4em;
+    width: 25em;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}

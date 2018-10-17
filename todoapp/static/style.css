@@ -1,0 +1,57 @@
+button {
+    background-color: lightgreen;
+    height: 4em;
+    width: 31.5%;
+    padding: 8px;
+}
+
+#due-date-label {
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+#search-bar {
+    width: 20%;
+}
+
+#search-btn {
+    width: 10%;
+    height: 5em;
+    background-color: lightgray;
+}
+
+#show-all-btn {
+    height: 5em;
+    background-color: lightgray;
+}
+
+#filter-btn {
+    width: 15%;
+    height: 5em;
+    background-color: lightgray;
+}
+
+#status-list {
+    height: 5em;
+    width: 31.5%;
+    margin-bottom: 25px;
+}
+
+#upcoming-dates {
+    height: 5em;
+    width: 16.5%;
+}
+
+input {
+  height: 35px;
+  border: 1px solid #d8d8d8;
+  padding: 8px;
+  font-size: 13px;
+  margin-bottom: 5px;
+  width: 30%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
