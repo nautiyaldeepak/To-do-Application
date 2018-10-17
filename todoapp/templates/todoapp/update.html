@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Done</title>
+</head>
+<body>
+    <h2>Updated</h2>
+    <form method='post' action="."> {% csrf_token %}
+        <button type="submit" name="home button" value="">Home</button>
+    </form>
+    <form method='post' action='showTask'> {% csrf_token %}
+        <br><input type="submit" value="Show All Tasks"><br>
+    </form>
+</body>
+</html>
